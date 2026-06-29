@@ -1,1 +1,310 @@
-[]
+[
+  {
+    "nombre": "portada",
+    "categoria": "portada",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/01-portada.jpg"
+  },
+  {
+    "nombre": "Baterías",
+    "categoria": "Baterías",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/02-baterias.jpg"
+  },
+  {
+    "nombre": "Baterías",
+    "categoria": "Baterías",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/03-baterias.jpg"
+  },
+  {
+    "nombre": "Baterías",
+    "categoria": "Baterías",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/04-baterias.jpg"
+  },
+  {
+    "nombre": "Baterías",
+    "categoria": "Baterías",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/05-baterias.jpg"
+  },
+  {
+    "nombre": "Baterías",
+    "categoria": "Baterías",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/06-baterias.jpg"
+  },
+  {
+    "nombre": "mega show de luces aéreo",
+    "categoria": "mega show de luces aéreo",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/07-mega-show-de-luces-aereo.jpg"
+  },
+  {
+    "nombre": "BATERIAS",
+    "categoria": "BATERIAS",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/08-baterias.jpg"
+  },
+  {
+    "nombre": "Batería",
+    "categoria": "Batería",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/09-bateria.jpg"
+  },
+  {
+    "nombre": "Baterías de bombeta 0.60 pulgadas",
+    "categoria": "Baterías",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/10-baterias-de-bombeta-0-60-pulgadas.jpg"
+  },
+  {
+    "nombre": "BATERIA Y TUBOS DE HUMO DE COLORES",
+    "categoria": "BATERIA Y TUBOS",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/11-bateria-y-tubos-de-humo-de-colores.jpg"
+  },
+  {
+    "nombre": "globos aerostáticos",
+    "categoria": "globos",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/12-globos-aerostaticos.jpg"
+  },
+  {
+    "nombre": "Baterías lloronas",
+    "categoria": "Baterías",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/13-baterias-lloronas.jpg"
+  },
+  {
+    "nombre": "Rollos de metrallador",
+    "categoria": "Rollos",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/14-rollos-de-metrallador.jpg"
+  },
+  {
+    "nombre": "Rollos de metralladora",
+    "categoria": "Rollos",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/15-rollos-de-metralladora.jpg"
+  },
+  {
+    "nombre": "Artillerias",
+    "categoria": "Artillerias",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/16-artillerias.jpg"
+  },
+  {
+    "nombre": "Combo",
+    "categoria": "Combo",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/17-combo.jpg"
+  },
+  {
+    "nombre": "Combo",
+    "categoria": "Combo",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/18-combo.jpg"
+  },
+  {
+    "nombre": "Combo",
+    "categoria": "Combo",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/19-combo.jpg"
+  },
+  {
+    "nombre": "Estrella Tigre gigante",
+    "categoria": "Estrella Tigre",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/20-estrella-tigre-gigante.jpg"
+  },
+  {
+    "nombre": "Volcancitos",
+    "categoria": "Volcancitos",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/21-volcancitos.jpg"
+  },
+  {
+    "nombre": "Volcancitos",
+    "categoria": "Volcancitos",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/22-volcancitos.jpg"
+  },
+  {
+    "nombre": "botellas",
+    "categoria": "botellas",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/23-botellas.jpg"
+  },
+  {
+    "nombre": "pagina-24",
+    "categoria": "varios",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/24-pagina-24.jpg"
+  },
+  {
+    "nombre": "explosivos",
+    "categoria": "explosivos",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/25-explosivos.jpg"
+  },
+  {
+    "nombre": "Voladores",
+    "categoria": "Voladores",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/26-voladores.jpg"
+  },
+  {
+    "nombre": "MEDUSA",
+    "categoria": "MEDUSA",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/27-medusa.jpg"
+  },
+  {
+    "nombre": "Voladores",
+    "categoria": "Voladores",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/28-voladores.jpg"
+  },
+  {
+    "nombre": "Ametralladora metro",
+    "categoria": "Ametralladora",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/29-ametralladora-metro.jpg"
+  },
+  {
+    "nombre": "Explosivos",
+    "categoria": "Explosivos",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/30-explosivos.jpg"
+  },
+  {
+    "nombre": "Show de piso",
+    "categoria": "Show",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/31-show-de-piso.jpg"
+  },
+  {
+    "nombre": "Show de piso",
+    "categoria": "Show",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/32-show-de-piso.jpg"
+  },
+  {
+    "nombre": "Barrilito Luminador",
+    "categoria": "Barrilito",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/33-barrilito-luminador.jpg"
+  },
+  {
+    "nombre": "Chiltepes y pili crackers",
+    "categoria": "Chiltepes",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/34-chiltepes-y-pili-crackers.jpg"
+  },
+  {
+    "nombre": "Misiles",
+    "categoria": "Misiles",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/35-misiles.jpg"
+  },
+  {
+    "nombre": "Explosivos",
+    "categoria": "Explosivos",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/36-explosivos.jpg"
+  },
+  {
+    "nombre": "bateria starry night",
+    "categoria": "Batería",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/37-bateria-starry-night.jpg"
+  },
+  {
+    "nombre": "Show de piso",
+    "categoria": "Show",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/38-show-de-piso.jpg"
+  },
+  {
+    "nombre": "Show de piso",
+    "categoria": "Show",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/39-show-de-piso.jpg"
+  },
+  {
+    "nombre": "Show aéreo",
+    "categoria": "Show aéreo",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/40-show-aereo.jpg"
+  },
+  {
+    "nombre": "Explosivos",
+    "categoria": "Explosivos",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/41-explosivos.jpg"
+  },
+  {
+    "nombre": "Tanquecitos, botella mágica",
+    "categoria": "Tanquecitos",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/42-tanquecitos-botella-magica.jpg"
+  },
+  {
+    "nombre": "Volcancitos",
+    "categoria": "Volcancitos",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/43-volcancitos.jpg"
+  },
+  {
+    "nombre": "SHOW DE PISO",
+    "categoria": "Show",
+    "descripcion": "Consulta disponibilidad y detalles por WhatsApp",
+    "precio": "Consultar",
+    "imagen": "assets/productos/44-show-de-piso.jpg"
+  }
+]

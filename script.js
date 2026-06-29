@@ -50,24 +50,23 @@ if (navToggle && siteNav) {
 // =============================
 
 const catalogFile = 'catalogo.json';
-const productosDir = 'assets/productos';
 const catalogContainer = document.getElementById('catalogoGrid');
 
-// Construye un enlace de WhatsApp específico para un producto
+// Mensaje de WhatsApp para un producto (requerimiento: mensaje personalizado)
 function buildWhatsappLink(product) {
-  const message = `Hola, quiero información sobre la ${product.nombre} con precio ${product.precio}.`;
+  const message = `Hola, vi el catálogo y quiero información sobre: ${product.nombre}`;
   return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 }
 
-// Crea una tarjeta DOM a partir del objeto producto
+// Crea una tarjeta DOM a partir del objeto producto (estructura esperada en catalogo.json):
+// { nombre, categoria, descripcion, precio, imagen }
 function createProductCard(product) {
   const article = document.createElement('article');
   article.className = 'product-card';
 
-  // Imagen
+  // Imagen: product.imagen ya incluye la ruta relativa (assets/productos/archivo.jpg)
   const img = document.createElement('img');
-  // Usar encodeURIComponent en el filename para manejar espacios y caracteres especiales
-  img.src = `${productosDir}/${encodeURIComponent(product.filename)}`;
+  img.src = product.imagen;
   img.alt = product.nombre || 'Producto';
   article.appendChild(img);
 
@@ -77,26 +76,24 @@ function createProductCard(product) {
 
   const tag = document.createElement('p');
   tag.className = 'product-tag';
-  tag.textContent = product.nombre || '';
+  tag.textContent = product.categoria || '';
   info.appendChild(tag);
 
   const title = document.createElement('h3');
   title.textContent = product.nombre || '';
   info.appendChild(title);
 
-  if (product.comentario) {
+  if (product.descripcion) {
     const comment = document.createElement('p');
     comment.className = 'product-comment';
-    comment.textContent = product.comentario;
+    comment.textContent = product.descripcion;
     info.appendChild(comment);
   }
 
-  if (product.precio) {
-    const price = document.createElement('p');
-    price.className = 'product-price';
-    price.textContent = product.precio;
-    info.appendChild(price);
-  }
+  const price = document.createElement('p');
+  price.className = 'product-price';
+  price.textContent = product.precio || 'Consultar';
+  info.appendChild(price);
 
   // Acciones (botón consultar por WhatsApp)
   const actions = document.createElement('div');

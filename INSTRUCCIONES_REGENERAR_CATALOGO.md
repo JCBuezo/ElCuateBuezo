@@ -17,13 +17,10 @@ Notas sobre el formato del nombre de archivo:
 - Si el nombre contiene "_" adicionales, el comentario incluirá todo el resto.
 - Es importante revisar catalogo.json después de generar para corregir nombres si es necesario.
 
-Extraer imágenes desde un PDF (Windows):
-- Uso del script PowerShell incluido (scripts/extract_images_from_pdf.ps1):
-  1. Instala ImageMagick (https://imagemagick.org) o Poppler (https://poppler.freedesktop.org).
-  2. Ejecuta desde PowerShell (ejemplo):
-	 .\scripts\extract_images_from_pdf.ps1 -PdfPath "C:\Users\Anadeisy Ruano\Downloads\CATALOGO PRECIO.pdf" -OutDir "assets/productos"
-  3. El script exportará imágenes por página (page-0001.jpg, ...). Luego debes renombrar
-	 cada imagen siguiendo el formato: Nombre _ Precio _ Comentario.jpg
+Nota sobre extracción desde PDF:
+- El script para extraer imágenes desde PDF fue eliminado del repositorio para mantener el proyecto limpio.
+- Si necesitas extraer imágenes desde un PDF, usa tu herramienta local preferida (ImageMagick, pdftoppm,
+  Adobe Acrobat, etc.) y copia las imágenes resultantes en assets/productos.
 
 Mantener compatibilidad con GitHub Pages:
 - Todos los archivos son estáticos (HTML, CSS, JS, JSON, imágenes) y se pueden publicar

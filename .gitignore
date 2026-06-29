@@ -1,0 +1,6 @@
+.vs/
+Thumbs.db
+.DS_Store
+node_modules/
+imagenes_catalogo_precio_pirotecnia.zip
+*.log
