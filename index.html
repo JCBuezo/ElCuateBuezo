@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<!--
+  Archivo: index.html
+  Propósito: Página principal del sitio de ELCUATEBUEZOWEB.
+
+  Nota: se han insertado comentarios de programador por secciones para facilitar mantenimiento.
+-->
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -7,7 +13,7 @@
       name="description"
       content="Venta de pirotecnia en Guatemala: cohetes, volcanes, luces, paquetes familiares y celebraciones. Cotiza por WhatsApp."
     />
-    <title>Pirotecnia Guatemala | Venta de fuegos artificiales</title>
+    <title>ELCUATEBUEZOWEB | Venta de fuegos artificiales</title>
     <link
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23c63d2f'/%3E%3Cpath d='M32 10l4 14 14-5-9 12 12 9-15 1-6 14-6-14-15-1 12-9-9-12 14 5z' fill='%23f5b942'/%3E%3C/svg%3E"
@@ -16,18 +22,22 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- HEADER: marca, botón de menú y navegación principal -->
     <header class="site-header">
+      <!-- Marca: logo escueto y nombre de la empresa. href a #inicio para accesibilidad -->
       <a class="brand" href="#inicio" aria-label="Ir al inicio">
         <span class="brand-mark">PG</span>
-        <span>Pirotecnia Guatemala</span>
+        <span>ELCUATEBUEZOWEB</span>
       </a>
 
+      <!-- Botón del menú (visible en móvil): tiene aria-expanded dinámico manejado por script.js -->
       <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
       </button>
 
+      <!-- Navegación principal. Enlaces ancla a secciones internas de la página -->
       <nav class="site-nav" aria-label="Navegacion principal">
         <a href="#productos">Productos</a>
         <a href="#galeria">Galeria</a>
@@ -37,15 +47,24 @@
     </header>
 
     <main>
+      <!-- HERO: bloque superior con llamada a la acción -->
       <section class="hero" id="inicio">
         <div class="hero-content">
+          <!-- Eyebrow: texto pequeño sobre el hero -->
           <p class="eyebrow">Venta de pirotecnia en Guatemala</p>
+
+          <!-- Título principal: mensaje de valor -->
           <h1>Ilumina tus celebraciones con productos listos para compartir.</h1>
+
+          <!-- Descripción breve: introduce los productos y call-to-action por WhatsApp -->
           <p>
             Cohetes, volcanes, luces y paquetes para fiestas familiares, eventos y fechas
             especiales. Consulta disponibilidad y precios por WhatsApp.
           </p>
+
+          <!-- Acciones principales: botón que abre WhatsApp y enlace a productos -->
           <div class="hero-actions">
+            <!-- js-whatsapp-link: clase objetivo para que script.js asigne la URL de WhatsApp -->
             <a class="btn btn-primary js-whatsapp-link" href="#" target="_blank" rel="noopener">
               Cotizar por WhatsApp
             </a>
@@ -54,6 +73,7 @@
         </div>
       </section>
 
+      <!-- INTRO STRIP: tres beneficios rápidos, visibles en la entrada del contenido -->
       <section class="section intro-strip" aria-label="Informacion rapida">
         <div>
           <strong>Atencion directa</strong>
@@ -69,6 +89,7 @@
         </div>
       </section>
 
+      <!-- SECCIÓN PRODUCTOS: lista de categorías como tarjetas (sin lógica dinámica aquí) -->
       <section class="section" id="productos">
         <div class="section-heading">
           <p class="eyebrow">Categorias</p>
@@ -76,6 +97,7 @@
           <p>Elige una categoria y pide fotos, precios y disponibilidad actual por WhatsApp.</p>
         </div>
 
+        <!-- Grid estático de categorías: cada article es una tarjeta informativa -->
         <div class="category-grid">
           <article class="category-card">
             <span class="category-icon">01</span>
@@ -105,64 +127,21 @@
         </div>
       </section>
 
+      <!-- GALERÍA DINÁMICA: el contenido se generará desde catalogo.json y las imágenes en assets/productos -->
       <section class="section gallery-section" id="galeria">
         <div class="section-heading">
           <p class="eyebrow">Galeria</p>
-          <h2>Imagenes de ejemplo</h2>
-          <p>Estas imagenes son referenciales. Puedes reemplazarlas por fotos reales de tu negocio.</p>
+          <h2>Productos</h2>
+          <p>A continuación, los productos disponibles. Este catálogo se genera automáticamente a partir de las imágenes en <code>assets/productos</code>.</p>
         </div>
 
-        <div class="product-grid">
-          <article class="product-card">
-            <img
-              src="https://images.unsplash.com/photo-1467810563316-b5476525c0f9?auto=format&fit=crop&w=900&q=80"
-              alt="Fuegos artificiales iluminando el cielo"
-            />
-            <div>
-              <p class="product-tag">Cohetes</p>
-              <h3>Linea tradicional</h3>
-              <p>Consulta presentaciones disponibles para celebraciones grandes o pequenas.</p>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <img
-              src="https://images.unsplash.com/photo-1533236897111-3e94666b2edf?auto=format&fit=crop&w=900&q=80"
-              alt="Chispas de pirotecnia en una celebracion nocturna"
-            />
-            <div>
-              <p class="product-tag">Volcanes</p>
-              <h3>Volcan familiar</h3>
-              <p>Ideal para agregar luz y movimiento en espacios abiertos.</p>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <img
-              src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=900&q=80"
-              alt="Celebracion con luces decorativas"
-            />
-            <div>
-              <p class="product-tag">Luces</p>
-              <h3>Luces para fiesta</h3>
-              <p>Opciones visuales para cumpleanos, eventos y reuniones especiales.</p>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <img
-              src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=900&q=80"
-              alt="Mesa preparada para celebracion familiar"
-            />
-            <div>
-              <p class="product-tag">Paquetes</p>
-              <h3>Combo familiar</h3>
-              <p>Paquetes variados para comprar rapido segun presupuesto y ocasion.</p>
-            </div>
-          </article>
+        <!-- Contenedor vacío que se llenará dinámicamente por script.js -->
+        <div id="catalogoGrid" class="product-grid" aria-live="polite">
+          <!-- Las tarjetas se insertarán aquí mediante JavaScript -->
         </div>
       </section>
 
+      <!-- PASOS DE COMPRA: instructivo breve en 3 pasos -->
       <section class="section steps-section" id="comprar">
         <div class="section-heading">
           <p class="eyebrow">Como comprar</p>
@@ -170,6 +149,7 @@
         </div>
 
         <div class="steps">
+          <!-- Cada article describe un paso; el orden es importante para el usuario -->
           <article>
             <span>1</span>
             <h3>Elige tu categoria</h3>
@@ -188,6 +168,7 @@
         </div>
       </section>
 
+      <!-- SEGURIDAD: bloque importante con recomendaciones de uso responsable -->
       <section class="section safety-section" id="seguridad">
         <div class="safety-content">
           <p class="eyebrow">Uso responsable</p>
@@ -201,15 +182,19 @@
       </section>
     </main>
 
+    <!-- FOOTER: año dinámico y enlace a WhatsApp -->
     <footer class="site-footer">
-      <p>&copy; <span id="currentYear"></span> Pirotecnia Guatemala. Todos los derechos reservados.</p>
+      <p>&copy; <span id="currentYear"></span> ELCUATEBUEZOWEB. Todos los derechos reservados.</p>
+      <!-- Enlaces con clase js-whatsapp-link serán actualizados por script.js -->
       <a class="js-whatsapp-link" href="#" target="_blank" rel="noopener">Contactar por WhatsApp</a>
     </footer>
 
+    <!-- BOTÓN FLOTANTE: accesible desde cualquier sección; clase js-whatsapp-link para script -->
     <a class="whatsapp-float js-whatsapp-link" href="#" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
       <span>WhatsApp</span>
     </a>
 
+    <!-- Script principal: añade interactividad ligera (no hay dependencias externas) -->
     <script src="script.js"></script>
   </body>
 </html>

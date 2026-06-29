@@ -1,3 +1,34 @@
+/*
+  Archivo: styles.css
+  Propósito: Estilos globales para la UI de ELCUATEBUEZOWEB.
+
+  Resumen y estructura:
+  - Variables CSS en :root para colores, sombras y tokens reutilizables.
+  - Reglas base para elementos (box-sizing, tipografía, resets básicos).
+  - Estilos para la cabecera fija (.site-header), marca (.brand), navegación (.site-nav)
+    y botón de alternancia del menú (.nav-toggle).
+  - Sección hero (.hero): fondo compuesto (imagen + gradiente) y contenido responsivo.
+  - Componentes de UI: .btn, .category-grid/.product-grid para tarjetas, .steps, .intro-strip.
+  - Footer (.site-footer) y botón flotante de WhatsApp (.whatsapp-float).
+  - Media queries para pantallas <=980px y <=720px con ajustes de grid y visibilidad del menú.
+
+  Notas importantes sobre selectores y comportamiento:
+  - Las variables definidas en :root facilitan la personalización (colores primarios, acentos y sombras).
+  - .site-header usa position: sticky para permanecer visible y backdrop-filter para efecto de vidrio.
+  - .nav-toggle está oculto en escritorio y aparece en pantallas pequeñas; la clase .site-nav.is-open controla
+    la visibilidad del menú móvil (la lógica de añadir/quitar esta clase está en script.js).
+  - .js-whatsapp-link no tiene reglas CSS específicas aquí, pero el selector se usa en HTML/JS para identificar
+    enlaces que el script transforma en enlaces funcionales de WhatsApp.
+  - Los breakpoints reorganizan grids (category-grid, product-grid, steps) para una experiencia móvil legible.
+
+  Compatibilidad:
+  - Se utilizan propiedades modernas (aspect-ratio, clamp, backdrop-filter). Si es necesario soportar navegadores
+    muy antiguos, considerar polyfills o ajustes progresivos.
+*/
+
+/* =====================
+   Variables y tokens
+   ===================== */
 :root {
   --bg: #fffaf2;
   --ink: #211a16;
@@ -11,34 +42,40 @@
   --shadow: 0 18px 44px rgba(33, 26, 22, 0.13);
 }
 
+/* =====================
+   Reset y reglas base
+   ===================== */
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; /* evita problemas con padding/border en el ancho total */
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* desplazamiento suave al usar anclas */
 }
 
 body {
-  margin: 0;
+  margin: 0; /* reset del margin por defecto */
   background: var(--bg);
   color: var(--ink);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif; /* tipografía base */
   line-height: 1.6;
 }
 
 img {
-  display: block;
+  display: block; /* evita espacios blancos debajo de imágenes inline */
   width: 100%;
 }
 
 a {
-  color: inherit;
+  color: inherit; /* enlaces heredan color del contenedor por diseño */
   text-decoration: none;
 }
 
+/* =====================
+   Cabecera / navegación
+   ===================== */
 .site-header {
-  position: sticky;
+  position: sticky; /* permanece visible al hacer scroll */
   top: 0;
   z-index: 20;
   display: flex;
@@ -48,14 +85,14 @@ a {
   padding: 16px clamp(18px, 5vw, 64px);
   background: rgba(255, 250, 242, 0.94);
   border-bottom: 1px solid var(--line);
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px); /* efecto vidrio en navegadores compatibles */
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-weight: 800;
+  font-weight: 800; /* marca destacada */
 }
 
 .brand-mark {
@@ -66,9 +103,10 @@ a {
   color: var(--white);
   background: var(--red);
   border-radius: 50%;
-  font-size: 0.85rem;
+  font-size: 0.85rem; /* tamaño del monograma */
 }
 
+/* Navegación principal en escritorio */
 .site-nav {
   display: flex;
   align-items: center;
@@ -78,10 +116,12 @@ a {
   font-size: 0.95rem;
 }
 
+/* Resalta enlace al pasar el ratón */
 .site-nav a:hover {
   color: var(--red);
 }
 
+/* Botón hamburguesa para móvil (oculto en escritorio) */
 .nav-toggle {
   display: none;
   width: 42px;
@@ -92,6 +132,7 @@ a {
   background: var(--white);
 }
 
+/* Tiras del icono hamburguesa */
 .nav-toggle span {
   display: block;
   height: 2px;
@@ -99,19 +140,22 @@ a {
   background: var(--ink);
 }
 
+/* =====================
+   Hero (banner principal)
+   ===================== */
 .hero {
-  min-height: 74vh;
+  min-height: 74vh; /* ocupa la mayor parte de la pantalla inicial */
   display: grid;
   align-items: center;
   padding: 86px clamp(18px, 5vw, 72px);
   color: var(--white);
   background:
     linear-gradient(90deg, rgba(20, 33, 61, 0.92) 0%, rgba(20, 33, 61, 0.72) 46%, rgba(20, 33, 61, 0.18) 100%),
-    url("https://images.unsplash.com/photo-1467810563316-b5476525c0f9?auto=format&fit=crop&w=1800&q=82") center/cover;
+    url("https://images.unsplash.com/photo-1467810563316-b5476525c0f9?auto=format&fit=crop&w=1800&q=82") center/cover; /* imagen + gradiente para mejorar contraste */
 }
 
 .hero-content {
-  max-width: 720px;
+  max-width: 720px; /* limita el ancho del texto para mejor legibilidad */
 }
 
 .eyebrow {
@@ -120,9 +164,10 @@ a {
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0;
-  text-transform: uppercase;
+  text-transform: uppercase; /* estilo pequeño que precede al título */
 }
 
+/* Regla compartida para títulos principales */
 .hero h1,
 .section-heading h2,
 .safety-content h2 {
@@ -132,9 +177,10 @@ a {
 
 .hero h1 {
   max-width: 700px;
-  font-size: clamp(2.2rem, 6vw, 4.8rem);
+  font-size: clamp(2.2rem, 6vw, 4.8rem); /* responsivo con clamp */
 }
 
+/* Párrafo del hero (excluye .eyebrow) */
 .hero p:not(.eyebrow) {
   max-width: 610px;
   margin: 20px 0 0;
@@ -149,6 +195,9 @@ a {
   margin-top: 30px;
 }
 
+/* =====================
+   Botones reutilizables
+   ===================== */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -157,7 +206,7 @@ a {
   padding: 12px 20px;
   border-radius: 8px;
   font-weight: 800;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* microinteracciones */
 }
 
 .btn:hover {
@@ -175,10 +224,14 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
+/* =====================
+   Secciones generales
+   ===================== */
 .section {
   padding: 74px clamp(18px, 5vw, 72px);
 }
 
+/* Banda con tres columnas informativas */
 .intro-strip {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -198,6 +251,7 @@ a {
   display: block;
 }
 
+/* Color para textos secundarios en varias secciones */
 .intro-strip span,
 .section-heading p,
 .category-card p,
@@ -222,6 +276,9 @@ a {
   margin-bottom: 0;
 }
 
+/* =====================
+   Grid de categorías y tarjetas
+   ===================== */
 .category-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -238,6 +295,7 @@ a {
   box-shadow: 0 10px 30px rgba(33, 26, 22, 0.06);
 }
 
+/* Icono circular para número o marcador */
 .category-icon,
 .steps span {
   display: inline-grid;
@@ -264,43 +322,118 @@ a {
   margin: 0;
 }
 
+/* =====================
+   Galería de productos / Catálogo
+   ===================== */
 .gallery-section {
   background: #f4efe6;
 }
 
+/* Grid general para el catálogo: adaptable según ancho */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
+  gap: 24px;
 }
 
+/* Tarjeta de producto moderna */
 .product-card {
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* evita que contenido sobresalga */
   background: var(--white);
   border: 1px solid var(--line);
-  border-radius: 8px;
-  box-shadow: var(--shadow);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(33, 26, 22, 0.08);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 44px rgba(33, 26, 22, 0.12);
+}
+
+/* Imagen del producto: cubrir la parte superior de la tarjeta */
 .product-card img {
-  aspect-ratio: 4 / 3;
+  width: 100%;
+  height: 220px;
   object-fit: cover;
   background: #ddd;
+  display: block;
 }
 
-.product-card div {
-  padding: 20px;
+/* Contenido interno de la tarjeta */
+.product-info {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1 1 auto;
 }
 
 .product-tag {
   display: inline-flex;
-  margin-bottom: 8px;
+  align-items: center;
+  gap: 8px;
   color: var(--red);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 800;
   text-transform: uppercase;
 }
 
+.product-info h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.product-comment {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.product-price {
+  margin-top: 6px;
+  font-weight: 900;
+  color: var(--night);
+}
+
+/* Acciones: botón de WhatsApp alineado al final */
+.product-actions {
+  margin-top: 12px;
+  display: flex;
+}
+
+.product-actions .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Ajustes responsivos: menos columnas en pantallas pequeñas */
+@media (max-width: 1100px) {
+  .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 980px) {
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  .product-card img {
+    height: 200px;
+  }
+}
+
+/* =====================
+   Sección de pasos (dark)
+   ===================== */
 .steps-section {
   background: var(--night);
   color: var(--white);
@@ -331,6 +464,9 @@ a {
   color: var(--ink);
 }
 
+/* =====================
+   Seguridad y aviso
+   ===================== */
 .safety-section {
   background: var(--white);
 }
@@ -343,6 +479,9 @@ a {
   border-radius: 8px;
 }
 
+/* =====================
+   Footer y elementos flotantes
+   ===================== */
 .site-footer {
   display: flex;
   align-items: center;
@@ -362,6 +501,7 @@ a {
   font-weight: 800;
 }
 
+/* Botón flotante de WhatsApp: permanece fijo en la esquina inferior derecha */
 .whatsapp-float {
   position: fixed;
   right: 18px;
@@ -380,6 +520,9 @@ a {
   font-weight: 800;
 }
 
+/* =====================
+   Media queries: ajustes responsivos
+   ===================== */
 @media (max-width: 980px) {
   .category-grid,
   .product-grid {
